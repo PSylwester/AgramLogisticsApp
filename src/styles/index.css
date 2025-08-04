@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@layer components {
+  .landing_title {
+    color: #ffffff;
+    background: linear-gradient(to bottom, #ffffff 25%, #59c5a1 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
