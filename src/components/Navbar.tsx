@@ -4,29 +4,28 @@ import logo from '../assets/logo.png';
 
 function Navbar() {
   return (
-    <AppBar
-      position="fixed"
-      sx={{ top: 0, zIndex: (theme) => theme.zIndex.drawer + 1 }}
-      style={{ background: '#000000', opacity: '0.8' }}
-    >
-      <Toolbar>
-        <Box
-          component={Link}
-          to="/"
-          sx={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}
-        //   target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Box component="img" src={logo} alt="Logo" sx={{ height: 50 }} />
-        </Box>
+    <header className="navbar-wrapper">
+      <div className="navbar-container">
+        {/* Logo */}
+        <Link to="/" className="navbar-logo-container">
+          <img src={logo} alt="Logo" className="navbar-logo" />
+        </Link>
 
-        <Button color="inherit" component={Link} to="/" sx={{ ml: 2 }}>
-          Home
-        </Button>
+        {/* Menu główne */}
+        <nav className="navbar-menu">
+          <Link to="/" className="navbar-link">Home</Link>
+          <Link to="/" className="navbar-link">About</Link>
+          <Link to="/" className="navbar-link">Services</Link>
+          <Link to="/" className="navbar-link">Contact</Link>
+        </nav>
 
-        <Box sx={{ flexGrow: 1 }} />
-      </Toolbar>
-    </AppBar>
+        {/* Ikony / Akcje */}
+        <div className="navbar-icons">
+          <Link to="/" className="navbar-link">XXXX</Link>
+          <Link to="/" className="navbar-link">XXXX</Link>
+        </div>
+      </div>
+    </header>
   );
 }
 
